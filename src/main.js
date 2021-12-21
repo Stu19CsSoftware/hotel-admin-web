@@ -19,9 +19,11 @@ AV.init({
 })
 Vue.prototype.$AV = AV
 AV.debug.enable()
-created () {
-  const TestObject = AV.Object.extend('TestObject')
+
+function created () {
+  const TestObject = AV.Object.extend('Todo')
   const testObject = new TestObject()
-  testObject.save({ words: 'Hello World!' })
+  testObject.save({ content: 'Hello World!' })
   console.log('LeanCloud Rocks!')
 }
+created()
