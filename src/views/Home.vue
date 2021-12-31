@@ -1,6 +1,7 @@
 <template>
   <div class="home">
-    <HelloWorld msg="欢迎来到酒店管理系统之超级管理"/>
+    <img alt="Vue logo" src="../assets/logo.png">
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
