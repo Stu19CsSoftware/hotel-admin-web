@@ -1,0 +1,61 @@
+{
+    "menuItems": [
+        {
+            "id": 0,
+            "title": "仪表盘",
+            "icon": "fa fa-tachometer fa-lg",
+            "link": "/dashboard"
+        },
+        {
+            "id": 1,
+            "title": "员工管理",
+            "icon": "fa fa-user",
+            "chip": "new",
+            "link": "/dashboard",
+            "children": [               
+                {
+                    "id": 12,
+                    "title": "员工管理",
+                    "icon": "fa fa-user-secret",
+                    "chip": "new",
+                    "link": "/dashboard/staff_manage"
+                },
+                {
+                    "id": 13,
+                    "title": "员工新增",
+                    "icon": "fa fa-user-plus",
+                    "link": "/dashboard/staff_add"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "title": "客房管理",
+            "icon": "fa fa-user-secret fa-lg",
+            "chip": "new",
+            "link": "/dashboard",
+            "children": [
+                {
+                    "id": 5,
+                    "title": "客房新增",
+                    "icon": "fa fa-bed",
+                    "link": "/dashboard/room_add"
+                },
+                {
+                    "id": 6,
+                    "title": "客房管理",
+                    "icon": "fa fa-building",
+                    "chip": "new",
+                    "link": "/dashboard/room_manage"
+                },
+                {
+                    "id": 7,
+                    "title": "房型管理",
+                    "icon": "fa fa-user-secret fa-lg",
+                    "chip": "new",
+                    "link": "/dashboard/roomstyle_add"
+                }
+            ]
+        }
+    ]
+}

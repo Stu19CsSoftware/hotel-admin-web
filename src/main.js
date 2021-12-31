@@ -2,28 +2,18 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import './plugins/element.js'
-import AV from 'leancloud-storage'
+import ElementUI from 'element-ui'   // 导入ElementUI
+import 'element-ui/lib/theme-chalk/index.css'  // 导入element ui 主题
+import 'element-ui/lib/theme-chalk/display.css'  // 导入用于隐藏断点的样式
+import './assets/font-awesome-4.7.0/css/font-awesome.css'
+import './assets/css/style.css' //引入全局样式文件
 
 Vue.config.productionTip = false
+Vue.use(ElementUI)
+require('./api/init.js')
 
 new Vue({
   router,
   store,
   render: h => h(App)
 }).$mount('#app')
-AV.init({
-  appId: 'LLt4j6GcLm9G33Iz1dRSGKqB-gzGzoHsz',
-  appKey: 'AE7yCF8rh4sAEzEliV1c4xB6',
-  serveURL: 'https://llt4j6gc.lc-cn-n1-shared.com'
-})
-Vue.prototype.$AV = AV
-AV.debug.enable()
-
-function created () {
-  const TestObject = AV.Object.extend('Todo')
-  const testObject = new TestObject()
-  testObject.save({ content: 'Hello World!' })
-  console.log('LeanCloud Rocks!')
-}
-created()
